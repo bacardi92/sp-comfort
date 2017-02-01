@@ -1,0 +1,102 @@
+#primary{
+
+	.img-box.post{
+
+		position: relative;
+	    overflow: hidden;
+	    padding-bottom: 100%;
+	    -webkit-border-radius: 3px;
+	    border-radius: 3px;
+	    background-clip: padding-box;
+	    margin-bottom: 20px;
+	    cursor: pointer;
+        box-shadow: 0 0 2px rgba(0,0,0,0.3);
+
+	    &:hover, &:focus, &:active{
+			.img-bg{
+				-webkit-transition: all, 0.3s, ease-out;
+			    -moz-transition: all, 0.3s, ease-out;
+			    -ms-transition: all, 0.3s, ease-out;
+			    -o-transition: all, 0.3s, ease-out;
+			    transition: all, 0.3s, ease-out;
+				-moz-transform: scale(1.2);
+			    -webkit-transform: scale(1.2);
+			  	transform: scale(1.2);
+				opacity: 1;
+			}
+			.img-txt{				
+				top: 0%;	
+				bottom: 0%;		
+				z-index: 10;
+				visibility: visible;	
+				-webkit-transition: all, 0.3s, ease-out;
+			    -moz-transition: all, 0.3s, ease-out;
+			    -ms-transition: all, 0.3s, ease-out;
+			    -o-transition: all, 0.3s, ease-out;
+			    transition: all, 0.3s, ease-out;			   
+			}
+
+		}
+
+		.img-bg{
+			opacity: 0.9;
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    -webkit-border-radius: 3px;
+		    border-radius: 3px;
+		    background-clip: padding-box;
+		    -webkit-transition: all, 0.3s, ease-out;
+		    -moz-transition: all, 0.3s, ease-out;
+		    -ms-transition: all, 0.3s, ease-out;
+		    -o-transition: all, 0.3s, ease-out;
+		    transition: all, 0.3s, ease-out;
+		    background-size: contain;
+		    zoom: 1;
+		    background-repeat: no-repeat;
+		    background-position: center center;
+		    z-index: -1;
+		}
+
+		.img-txt{
+			position: absolute;
+		    top: 100%;
+		    left: 0;
+		    right: 0;
+		    bottom: -100%;		    
+		    text-align: center;		   
+		    display: flex;
+		    justify-content: flex-end;
+		    align-items: flex-end;
+		    flex-direction: column;
+		    visibility: hidden;
+		    z-index: -1;
+		    a{
+		    	color: #fff;
+		    	font-size: 20px;
+		    	font-weight: bold;
+		    	font-family: 'Lato-Light';
+		    	width:100%;		    	
+		    	padding: 0 15px 15px;
+		    	display: block;
+    			background: rgba(0,0,0,0.7);
+		    	&:hover{
+		    		text-decoration: none;
+		    	}
+		    }
+		    span.post_date{
+		    	font-size: 12px;
+		    	font-family: 'Lato-Light';
+		    	font-weight: normal;
+		    	display: inline-block;
+		    	// width: 50%;
+		    	float: right;
+		    }
+
+		}
+
+	}
+
+}

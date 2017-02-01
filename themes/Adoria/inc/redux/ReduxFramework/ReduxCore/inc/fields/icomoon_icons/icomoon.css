@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?vxp1od");
+  src: url("fonts/icomoon.eot?vxp1od#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?vxp1od") format("truetype"), url("fonts/icomoon.woff?vxp1od") format("woff"), url("fonts/icomoon.svg?vxp1od#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+div.icon-selector [class^="icon-"], div.icon-selector [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-Cloud:before {
+  content: "\e900"; }
+
+.icon-Complex:before {
+  content: "\e901"; }
+
+.icon-Consulting:before {
+  content: "\e902"; }
+
+.icon-Desktop:before {
+  content: "\e903"; }
+
+.icon-Mobile:before {
+  content: "\e904"; }
+
+.icon-QA:before {
+  content: "\e905"; }
+
+.icon-Server:before {
+  content: "\e906"; }
+
+.icon-UI:before {
+  content: "\e907"; }
+
+.icon-Web:before {
+  content: "\e908"; }
+div.icon-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.icomoonWrapper {
+    display: inline-block;
+    font-size: 40px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    box-sizing: border-box;
+}
+.icomoonWrapper:hover{
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.icomoonWrapper.selected{
+  border: 2px #000 solid;
+  background: #ccc;
+}
+.icomoonWrapper.selected:hover{
+  cursor: default;
+  box-shadow: none;
+}
