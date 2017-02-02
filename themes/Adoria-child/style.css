@@ -1,0 +1,13 @@
+/*
+Theme Name: Adoria-child
+Author: Maksim Prihodko
+Description: Adoria-child
+Template: Adoria
+*/
+
+@import url("../Adoria/css/style.min.css");
+
+#bc_header.sticky,
+#bc_header{
+	background: #00a5ff;
+}

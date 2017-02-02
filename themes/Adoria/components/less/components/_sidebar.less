@@ -1,0 +1,28 @@
+#sidebar{
+
+	ul{
+		list-style-type: none;
+		padding: 0;
+		li{
+			margin-bottom: 5px;
+
+			a{
+				text-decoration: none;
+				color: @defaultLink;
+				font-size: 18px;
+				font-weight: 500; 
+				padding-bottom: 5px;
+
+				&:hover{
+					color: @defaultHover;
+					border-bottom: 1px solid @defaultHover;
+					-webkit-transition: border-bottom, 0.3s, ease-out;
+				    -moz-transition: border-bottom, 0.3s, ease-out;
+				    -ms-transition: border-bottom, 0.3s, ease-out;
+				    -o-transition: border-bottom, 0.3s, ease-out;
+				    transition: border-bottom, 0.3s, ease-out;
+				}
+			}
+		}
+	}
+}
