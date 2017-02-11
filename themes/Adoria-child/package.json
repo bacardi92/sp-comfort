@@ -1,0 +1,16 @@
+{
+  "name": "bacardi",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-less": "^1.1.0",
+    "grunt-contrib-nodeunit": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-spritesmith": "^6.1.1"
+  }
+}

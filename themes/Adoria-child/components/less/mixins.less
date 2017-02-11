@@ -1,0 +1,14 @@
+.font(@fontName; @urlName: @fontName; @weight: normal; @style: normal) {
+  font-family: '@{fontName}';
+  src: url('./fonts/@{urlName}.eot');
+  src: url('./fonts/@{urlName}.eot#iefix') format('embedded-opentype'),
+  url('../fonts/@{urlName}.woff') format('woff'),
+    url('../fonts/@{urlName}.ttf') format('truetype'),
+    url('../fonts/@{urlName}.svg') format('svg');
+    font-weight: @weight;
+    font-style: @style;
+}
+
+.alignCenter(){
+  text-align: center;
+}
