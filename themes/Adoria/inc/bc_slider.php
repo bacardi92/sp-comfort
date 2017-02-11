@@ -156,18 +156,20 @@ class BC_Slider{
 			return false;
 		if(get_post_type($id) != 'bc_slick_slider')
 			return false;
-		if( apply_filters('bc_customize_slider', $id) );
+		if( has_filter('bc_customize_slider' )){
+			apply_filters('bc_customize_slider', $id);
 			return; 
+		}
 		$slides = get_post_meta($id, 'opt-slides', 1);
-
 		if(count($slides)>0): 
-			
 			$html = '<div class="slick">';
 			foreach ($slides as $slide): 
 			$html .= '<div class="slider_item_home" style="max-height:700px; min-height:600px; width:100%; background-image:url('.$slide['image'].');""></div>';
 			endforeach; 
 			$html .= '</div>';
-			$html = apply_filters('bc_slider_content', $html);
+			if( has_filter('bc_slider_content' )){
+				$html = apply_filters('bc_slider_content', $html);
+			}
 			echo $html;
 		endif; 
 

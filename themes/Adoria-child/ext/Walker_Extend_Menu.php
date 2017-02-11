@@ -36,38 +36,21 @@ function end_lvl( &$output, $depth = 0, $args = array() ) {
  * @param object $args
  */
 function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-
+    // echo "<pre>";
+    // var_dump($item);
+    // echo "</pre>";
     $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
     $class_names = $value = '';
     $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-    $classes[] = 'menu-item-' . $item->ID;
+    $classes[] = 'col-md-2 col-sm-3  col-xs-12 menu-item-' . $item->ID;
 
     $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
     $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-            /*
-    // values of depth
-    echo $item->title.' - ';
-    echo $depth.'<br />';
-    echo $class_names;
 
-    if ($depth == 0) 
-    {
-        if( check for subpage )
-        {
-            $class_names = $class_names ? ' class="menu-enable"' : '';
-        }
-        else
-        {
-            $class_names = $class_names ? '' : '';
-        }
-    }
-    else
-    {
-        $class_names = $class_names ? ' class="sub-menu-enable"' : '';
-    }*/
-
-    $output .= $indent . '<li' . $class_names . '>';
+    $src = get_term_meta($item->object_id, 'taxonomy_thumb', true);
+    $img = "<img class='menu-img' src='".$src."'>";
+    $output .= $indent . '<li' . $class_names . '>' . $img;
     $class = '';
     $data_atts ='';
     if($args->walker->has_children){
